@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPI PPKn — Sejarah Kelahiran Pancasila</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden;font-family:'Segoe UI',Tahoma,sans-serif;color:#0f2d4a}
+body{background:#f0f9ff url('istockphoto-903100200-612x612.jpg') center/cover no-repeat fixed;display:flex;align-items:center;justify-content:center}
+body::before{content:"";position:fixed;inset:0;background:rgba(240,249,255,.82);z-index:0}
+#stage-16-9{position:relative;z-index:1;background:transparent;border:none;box-shadow:none;border-radius:0;aspect-ratio:16/9;overflow:hidden;font-size:calc(15px*var(--font-scale,1));display:flex;flex-direction:column;padding:clamp(10px,1.8vh,18px);gap:clamp(6px,1.2vh,12px)}
+.pg{display:none;flex:1;min-height:0;flex-direction:column;gap:clamp(6px,1.2vh,12px);animation:in .4s}
+.pg.on{display:flex}@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1}}
+#top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+#top.hide{display:none}
+.cb{width:clamp(40px,5.2vh,48px);height:clamp(40px,5.2vh,48px);border-radius:50%;border:none;background:linear-gradient(135deg,#0ea5e9,#2563eb);color:#fff;font-size:clamp(18px,2.3vh,23px);font-weight:800;cursor:pointer;box-shadow:0 3px 8px #0003}
+.hb{border:none;border-radius:30px;padding:8px 18px;background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;font-weight:800;font-size:clamp(13.5px,1.8vh,17px);cursor:pointer}
+.title{align-self:center;background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;border-radius:30px;padding:6px 26px;font-weight:800;font-size:clamp(16px,2.2vh,22px);box-shadow:0 3px 8px #0003}
+.card{background:#fffffff0;border-radius:18px;padding:clamp(10px,1.6vh,16px);box-shadow:0 4px 12px #0002;border:2px solid #bae6fd}
+p,li{font-size:clamp(13px,1.65vh,16px);font-weight:600;line-height:1.48}
+h3{font-size:clamp(15px,2vh,20px);font-weight:800;color:#1e3a8a;margin-bottom:4px}
+.btn{border:none;border-radius:14px;padding:10px 22px;font-weight:800;font-size:clamp(13.5px,1.8vh,17px);cursor:pointer;background:linear-gradient(135deg,#0ea5e9,#2563eb);color:#fff;box-shadow:0 3px 0 #1e3a8a}
+.btn:active{transform:translateY(2px)}
+/* cover */
+#p1{justify-content:space-between}
+.hdr{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:center;background:#fff;border-radius:60px;padding:8px 22px;box-shadow:0 3px 10px #0003;align-self:center;font-weight:800}
+.hdr img{height:clamp(50px,6.8vh,68px)}
+.bdg{background:#fde68a;border-radius:20px;padding:3px 12px;font-size:clamp(12px,1.5vh,14px)}
+.mid{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:clamp(8px,2vh,22px)}
+.cov{font-size:clamp(2.8rem,6.8vw,5.2rem);line-height:1;font-weight:900;color:#dc2626;-webkit-text-stroke:0;text-shadow:4px 4px 0 #fff,-4px -4px 0 #fff,4px -4px 0 #fff,-4px 4px 0 #fff,0 8px 0 #991b1b}
+.sub{font-size:clamp(1.4rem,3.2vw,2.6rem);font-weight:900;color:#1e3a8a;text-shadow:2px 2px 0 #fff,-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff}
+.play{display:flex;align-items:center;gap:14px;background:none;border:none;cursor:pointer;animation:glow 1.6s infinite;border-radius:60px}
+.play i{width:clamp(60px,8.5vh,80px);height:clamp(60px,8.5vh,80px);border-radius:50%;background:linear-gradient(135deg,#22c55e,#15803d);color:#fff;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:clamp(26px,3.6vh,36px);padding-left:5px}
+.play b{font-size:clamp(24px,3.8vh,36px);color:#15803d;text-shadow:2px 2px 0 #fff,-2px -2px 0 #fff,2px -2px 0 #fff,-2px 2px 0 #fff}
+@keyframes glow{0%,100%{box-shadow:0 0 0 0 #22c55e99;transform:scale(1)}50%{box-shadow:0 0 30px 14px #22c55e55;transform:scale(1.07)}}
+.ftr{align-self:center;background:#fff;border-radius:30px;padding:6px 22px;font-weight:700;font-size:clamp(13px,1.7vh,16px);text-align:center;box-shadow:0 2px 8px #0002}
+/* menu */
+.grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:clamp(8px,1.6vh,16px)}
+.mc{display:flex;align-items:center;gap:14px;text-align:left;cursor:pointer;border:3px solid #fff;border-radius:20px;padding:12px;background:#fff;box-shadow:0 6px 0 #0003;transition:.2s}
+.mc:hover{transform:translateY(-4px)}
+.ib{flex:none;width:clamp(66px,9vh,88px);height:clamp(66px,9vh,88px);border-radius:22px;display:flex;align-items:center;justify-content:center;font-size:clamp(34px,4.8vh,46px);box-shadow:inset 0 -5px 0 #0003}
+.mc b{display:block;font-size:clamp(15px,2vh,20px);font-weight:800;color:#1e3a8a}
+.mc span{font-size:clamp(12px,1.5vh,14px);font-weight:600}
+/* tp */
+.tp{flex:1;display:flex;flex-direction:column;justify-content:center;gap:clamp(8px,1.6vh,16px);max-width:84%;align-self:center}
+.tp li{list-style:none;display:flex;gap:12px;align-items:center;background:#f0f9ff;border-radius:14px;padding:clamp(8px,1.4vh,14px);font-size:clamp(13.5px,1.8vh,16px)}
+.tp li s{text-decoration:none;font-size:clamp(24px,3.4vh,34px)}
+/* materi */
+.mat{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(2,1fr);gap:clamp(8px,1.4vh,14px)}
+.mat .card{overflow:hidden;display:flex;flex-direction:column}
+.mat svg{height:42%;width:100%;margin-bottom:4px;flex:none;background:#f0f9ff;border-radius:10px}
+/* sim */
+svg text{font-weight:800;font-size:14px;font-family:inherit}
+.flow{stroke-dasharray:10 8;animation:dash 1s linear infinite}@keyframes dash{to{stroke-dashoffset:-18}}
+.nd{cursor:pointer;transition:.2s}.nd:hover{transform:scale(1.15)}
+.pulse{animation:pl 1.2s infinite}@keyframes pl{50%{opacity:.4}}
+/* eval */
+#ev{flex:1;min-height:0;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center}
+.opt{display:block;width:100%;text-align:left;margin:6px 0;border:2px solid #7dd3fc;background:#fff;color:#0f2d4a;border-radius:12px;padding:10px 22px;font-weight:700;font-size:clamp(13.5px,1.8vh,17px);cursor:pointer}
+.opt.ok{background:#bbf7d0;border-color:#16a34a}.opt.no{background:#fecaca;border-color:#dc2626}
+#mw{position:relative;width:100%;display:flex;justify-content:space-between;gap:40%}
+#mw>div{flex:1;display:flex;flex-direction:column;gap:8px;z-index:2}
+#mw svg{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.mb{border:3px solid #7dd3fc;background:#fff;border-radius:12px;padding:8px 12px;font-weight:700;font-size:clamp(12.5px,1.7vh,15.5px);cursor:pointer;color:#0f2d4a;text-align:center}
+.mb.sel{border-color:#f59e0b;background:#fef3c7}.mb.done{border-color:#16a34a;background:#dcfce7}
+.trophy{font-size:clamp(44px,6vh,60px);filter:drop-shadow(0 4px 6px #0004);animation:pl 1.5s infinite}
+.big{font-size:clamp(40px,8vh,72px);font-weight:900;color:#dc2626}
+/* profil */
+.pf{flex:1;display:flex;align-items:center;justify-content:center}
+.pf .card{display:flex;gap:28px;align-items:center;max-width:80%}
+.ph{flex:none;width:clamp(130px,18vh,175px);height:clamp(130px,18vh,175px);border-radius:50%;border:5px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#ef4444,#f59e0b,#2563eb) border-box;object-fit:cover;object-position:top;filter:drop-shadow(0 6px 8px #0005)}
+#modal{position:absolute;inset:0;background:#0007;display:none;align-items:center;justify-content:center;z-index:9}
+#modal.on{display:flex}
+</style></head><body>
+<div id="stage-16-9">
+<div id="top" class="hide">
+ <button class="hb" onclick="go(1)">🏠 BERANDA</button>
+ <div style="display:flex;gap:6px;align-items:center">
+  <button class="cb" title="Kecilkan huruf" onclick="fs(-.1)">A-</button><button class="cb" title="Besarkan huruf" onclick="fs(.1)">A+</button>
+  <button class="cb" title="Zoom" onclick="zm()">🔍</button><button class="cb" id="snd" onclick="tg()">🔊</button>
+ </div>
+</div>
+
+<!-- 1 COVER -->
+<section class="pg on" id="p1">
+ <div class="hdr"><img src="Salinan_dari_Salinan_dari_Salinan_dari_Biru_Modern_Dokumentasi_Kunjungan_Industri_Universitas_Instagram_Post.png" alt="Logo" onerror="this.style.display='none'"><span>SMP NEGERI 2 MODO LAMONGAN</span><span>• Dinas Pendidikan Kab. Lamongan</span><span class="bdg">Kurikulum Merdeka</span><span class="bdg">Fase D</span></div>
+ <div class="mid"><div class="sub">PPKn Kelas VII</div><div class="cov">SEJARAH<br>KELAHIRAN<br>PANCASILA</div><div class="sub" style="font-size:clamp(1rem,2vw,1.6rem)">Media Pembelajaran Interaktif</div>
+ <button class="play" onclick="go(2)"><i>▶</i><b>MULAI</b></button></div>
+ <div class="ftr">Dikembangkan oleh: Slamet Ginanjar S.Pd, M.Pd • SMP Negeri 2 Modo Lamongan<br>“Belajar Pancasila, Mengukir Karakter Bangsa”</div>
+</section>
+
+<!-- 2 MENU -->
+<section class="pg" id="p2">
+ <div class="title">MENU UTAMA</div>
+ <div class="grid">
+  <div class="mc" onclick="go(3)"><div class="ib" style="background:#fca5a5">🎯</div><div><b>Tujuan Pembelajaran</b><span>Capaian &amp; indikator kompetensi</span></div></div>
+  <div class="mc" onclick="go(4)"><div class="ib" style="background:#fcd34d">📖</div><div><b>Materi Pembelajaran</b><span>Konsep kunci dengan diagram</span></div></div>
+  <div class="mc" onclick="go(5)"><div class="ib" style="background:#86efac">🕹️</div><div><b>Simulasi Interaktif</b><span>Linimasa sidang BPUPKI–PPKI</span></div></div>
+  <div class="mc" onclick="go(6)"><div class="ib" style="background:#93c5fd">📝</div><div><b>Evaluasi Multi-Format</b><span>3 jenis soal • 100 poin</span></div></div>
+  <div class="mc" onclick="go(7)"><div class="ib" style="background:#c4b5fd">👨‍🏫</div><div><b>Profil Guru</b><span>Fasilitator pembelajaran</span></div></div>
+  <div class="mc" onclick="fact()"><div class="ib" style="background:#f9a8d4">💡</div><div><b>Wawasan &amp; Fakta</b><span>Fakta menarik sejarah Pancasila</span></div></div>
+ </div>
+</section>
+
+<!-- 3 TP -->
+<section class="pg" id="p3">
+ <div class="title">🎯 Tujuan Pembelajaran</div>
+ <div class="card tp">
+  <p style="text-align:center;font-size:clamp(14px,1.9vh,17px)">Peserta didik mampu <b>memahami sejarah kelahiran Pancasila</b>. Indikator ketercapaian:</p>
+  <ul style="display:flex;flex-direction:column;gap:clamp(6px,1.2vh,12px)">
+   <li><s>📜</s>Menjelaskan latar belakang dibentuknya BPUPKI pada masa pendudukan Jepang.</li>
+   <li><s>🗣️</s>Mengidentifikasi usulan dasar negara dari Muhammad Yamin, Soepomo, dan Ir. Soekarno.</li>
+   <li><s>🤝</s>Menguraikan peran Panitia Sembilan dan lahirnya Piagam Jakarta (22 Juni 1945).</li>
+   <li><s>🏛️</s>Menganalisis pengesahan Pancasila sebagai dasar negara oleh PPKI (18 Agustus 1945).</li>
+   <li><s>🇮🇩</s>Menghargai nilai musyawarah dan persatuan para pendiri bangsa dalam kehidupan sehari-hari.</li>
+  </ul>
+ </div>
+</section>
+
+<!-- 4 MATERI -->
+<section class="pg" id="p4">
+ <div class="title">📖 Materi Pembelajaran</div>
+ <div class="mat">
+  <div class="card"><svg viewBox="0 0 300 100"><rect x="20" y="30" width="120" height="50" rx="8" fill="#fde68a" stroke="#f59e0b" stroke-width="4"/><text x="80" y="62" text-anchor="middle" font-size="14">JEPANG 1945</text><path class="flow" d="M145 55H260" stroke="#2563eb" stroke-width="5" fill="none"/><circle cx="265" cy="55" r="16" fill="#ef4444"/><text x="265" y="60" text-anchor="middle" fill="#fff" font-size="14">B</text></svg><h3>1. Lahirnya BPUPKI</h3><p>Jepang yang mulai terdesak menjanjikan kemerdekaan. Badan Penyelidik Usaha Persiapan Kemerdekaan Indonesia dibentuk 29 April 1945, diketuai dr. K.R.T. Radjiman Wedyodiningrat.</p></div>
+  <div class="card"><svg viewBox="0 0 300 100"><circle cx="60" cy="50" r="18" fill="#0ea5e9" stroke="#1e3a8a" stroke-width="4"/><circle cx="150" cy="50" r="18" fill="#22c55e" stroke="#166534" stroke-width="4"/><circle cx="240" cy="50" r="18" fill="#ef4444" stroke="#991b1b" stroke-width="4"/><rect x="25" y="76" width="70" height="20" rx="6" fill="#fff" stroke="#0ea5e9" stroke-width="1.5"/><text x="60" y="91" text-anchor="middle" font-size="13">29 Mei</text><rect x="115" y="76" width="70" height="20" rx="6" fill="#fff" stroke="#22c55e" stroke-width="1.5"/><text x="150" y="91" text-anchor="middle" font-size="13">31 Mei</text><rect x="205" y="76" width="70" height="20" rx="6" fill="#fff" stroke="#ef4444" stroke-width="1.5"/><text x="240" y="91" text-anchor="middle" font-size="13">1 Juni</text></svg><h3>2. Sidang I BPUPKI</h3><p>29 Mei–1 Juni 1945: Moh. Yamin, Soepomo, dan Ir. Soekarno mengemukakan gagasan dasar negara. Pada 1 Juni, Soekarno menyebut usulannya “Pancasila”.</p></div>
+  <div class="card"><svg viewBox="0 0 300 100"><g fill="#a78bfa" stroke="#5b21b6" stroke-width="3"><circle cx="90" cy="50" r="10"/><circle cx="120" cy="50" r="10"/><circle cx="150" cy="50" r="10"/><circle cx="180" cy="50" r="10"/><circle cx="210" cy="50" r="10"/></g><rect x="100" y="72" width="100" height="22" rx="6" fill="#fff" stroke="#7c3aed" stroke-width="1.5"/><text x="150" y="88" text-anchor="middle" font-size="13">9 Tokoh</text></svg><h3>3. Panitia Sembilan</h3><p>Dibentuk untuk merumuskan hasil sidang. Pada 22 Juni 1945 lahir naskah Piagam Jakarta (<i>Jakarta Charter</i>) yang memuat rumusan dasar negara.</p></div>
+  <div class="card"><svg viewBox="0 0 300 100"><rect x="50" y="25" width="200" height="50" rx="8" fill="#bbf7d0" stroke="#16a34a" stroke-width="4"/><path d="M60 25L150 8L240 25" fill="#fde68a" stroke="#f59e0b" stroke-width="4"/><rect x="95" y="76" width="110" height="20" rx="6" fill="#fff" stroke="#16a34a" stroke-width="1.5"/><text x="150" y="91" text-anchor="middle" font-size="13">10–17 Juli</text></svg><h3>4. Sidang II BPUPKI</h3><p>10–17 Juli 1945 membahas rancangan UUD, wilayah negara, dan bentuk negara. Setelah itu BPUPKI dibubarkan dan diganti PPKI.</p></div>
+  <div class="card"><svg viewBox="0 0 300 100"><rect x="120" y="10" width="8" height="55" fill="#7f1d1d"/><path class="flow" d="M128 12H220V42H128" fill="#ef4444" stroke="#fff" stroke-width="3"/><rect x="95" y="72" width="110" height="22" rx="6" fill="#fff" stroke="#ef4444" stroke-width="1.5"/><text x="150" y="88" text-anchor="middle" font-size="13">17-8-1945</text></svg><h3>5. Proklamasi Kemerdekaan</h3><p>Setelah Jepang menyerah, Soekarno-Hatta memproklamasikan kemerdekaan Indonesia pada 17 Agustus 1945 di Jalan Pegangsaan Timur 56, Jakarta.</p></div>
+  <div class="card"><svg viewBox="0 0 300 100"><circle cx="150" cy="45" r="30" fill="#fde68a" stroke="#f59e0b" stroke-width="5"/><text x="150" y="52" text-anchor="middle" font-size="22">⭐</text><rect x="95" y="76" width="110" height="20" rx="6" fill="#fff" stroke="#f59e0b" stroke-width="1.5"/><text x="150" y="91" text-anchor="middle" font-size="13">18-8-1945</text></svg><h3>6. PPKI Mengesahkan</h3><p>18 Agustus 1945 PPKI mengesahkan UUD 1945 dan Pancasila sebagai dasar negara. Tujuh kata dalam Piagam Jakarta diganti demi persatuan bangsa.</p></div>
+ </div>
+</section>
+
+<!-- 5 SIMULASI -->
+<section class="pg" id="p5">
+ <div class="title">🕹️ Simulasi: Linimasa Perjalanan Pancasila</div>
+ <div class="card" style="flex:1;min-height:0;display:flex;flex-direction:column;gap:6px">
+  <svg id="tl" viewBox="0 0 900 270" style="width:100%;height:clamp(260px,38vh,420px)"></svg>
+  <div id="info" class="card" style="background:#fef9c3;border-color:#fde047;flex:1;min-height:0;display:flex;align-items:center;gap:12px"><div style="flex:1"><h3 id="it">Klik titik pada linimasa!</h3><p id="id">Pilih peristiwa atau tekan ▶ Putar Otomatis untuk menelusuri sejarah.</p></div><button class="btn" onclick="auto()">▶ Putar Otomatis</button></div>
+  <div style="font-size:clamp(12px,1.5vh,14px);font-weight:800;text-align:center">Telemetri: peristiwa dijelajahi <span id="tc">0</span>/6 • <span id="tm">Belum mulai</span></div>
+ </div>
+</section>
+
+<!-- 6 EVALUASI -->
+<section class="pg" id="p6"><div class="title">📝 Evaluasi — <span id="ph1">Babak A</span></div><div id="ev"></div></section>
+
+<!-- 7 PROFIL -->
+<section class="pg" id="p7"><div class="title">👨‍🏫 Profil Guru Pengembang</div>
+ <div class="pf"><div class="card"><img class="ph" src="GINANJAR.jpg" alt="Foto Guru" onerror="this.style.display='none'">
+  <div><div style="font-size:clamp(20px,3vh,24px);font-weight:900;color:#1e3a8a">Slamet Ginanjar S.Pd, M.Pd</div>
+  <p style="font-size:clamp(13px,1.8vh,15px)">Guru PPKn • SMP Negeri 2 Modo Lamongan</p>
+  <p style="font-size:clamp(13px,1.8vh,15px)">Fasilitator Pembelajaran Kurikulum Merdeka Fase D</p>
+  <p style="margin-top:10px;font-style:italic;background:#fef3c7;padding:10px;border-radius:12px">“Pendidikan adalah senjata paling ampuh untuk membentuk karakter bangsa yang berpancasila.”</p></div></div></div>
+</section>
+<div id="modal" onclick="this.classList.remove('on')"><div class="card" style="max-width:62%;text-align:center;border-color:#f9a8d4"><div style="font-size:50px">💡</div><h3>Tahukah Kamu?</h3><p id="ft" style="font-size:clamp(14px,2vh,18px)"></p><button class="btn" style="margin-top:10px" onclick="event.stopPropagation();fact()">Fakta lain ➜</button></div></div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+let on=true,ac,fsc=1,zmv=1,fi=0;
+function snd(f,d=.15,t='sine',s=0,e){if(!on)return;try{ac=ac||new(window.AudioContext||window.webkitAudioContext)();const o=ac.createOscillator(),g=ac.createGain();o.type=t;o.frequency.setValueAtTime(f,ac.currentTime+s);if(e)o.frequency.exponentialRampToValueAtTime(e,ac.currentTime+s+d);g.gain.setValueAtTime(.15,ac.currentTime+s);g.gain.exponentialRampToValueAtTime(.001,ac.currentTime+s+d);o.connect(g);g.connect(ac.destination);o.start(ac.currentTime+s);o.stop(ac.currentTime+s+d)}catch(x){}}
+const click=()=>snd(450,.12,'sine',0,880),good=()=>[523,659,784].forEach((f,i)=>snd(f,.25,'triangle',i*.1)),bad=()=>snd(160,.35,'sawtooth');
+function tg(){on=!on;$('snd').textContent=on?'🔊':'🔇'}
+function fit(){const s=$('stage-16-9'),w=Math.min(innerWidth,innerHeight*16/9);s.style.width=w*zmv+'px'}
+function zm(){zmv=zmv>=1.1?.9:zmv+.1;fit()}
+function fs(d){fsc=Math.max(.8,Math.min(1.4,fsc+d));$('stage-16-9').style.setProperty('--font-scale',fsc)}
+addEventListener('resize',fit);fit();
+function go(n){click();document.querySelectorAll('.pg').forEach((p,i)=>p.classList.toggle('on',i+1==n));$('top').classList.toggle('hide',n==1);if(n==5)tl();if(n==6)ev(0)}
+const F=["BPUPKI dalam bahasa Jepang disebut Dokuritsu Junbi Cosakai.","Anggota BPUPKI berjumlah 62 orang, ditambah 7 anggota Jepang yang tidak punya hak suara.","Tanggal 1 Juni diperingati sebagai Hari Lahir Pancasila sejak 2016.","Rumusan awal Pancasila Soekarno 1 Juni: Kebangsaan, Internasionalisme, Mufakat, Kesejahteraan, Ketuhanan.","Panitia Sembilan diketuai Ir. Soekarno dengan anggota Moh. Hatta, A.A. Maramis, Abikoesno, Abdul Kahar Muzakkir, Agus Salim, Ahmad Subardjo, Wahid Hasjim, dan Muh. Yamin.","Sidang pertama BPUPKI digelar di gedung Chuo Sangi In (kini Gedung Pancasila), Jakarta."];
+function fact(){click();$('ft').textContent=F[fi++%F.length];$('modal').classList.add('on')}
+/* simulasi */
+const E=[["29 Mei 1945","Sidang I: Moh. Yamin menyampaikan usulan lima asas dasar negara secara lisan.","#0ea5e9"],["31 Mei 1945","Prof. Soepomo mengusulkan dasar negara paham integralistik (negara kekeluargaan).","#22c55e"],["1 Juni 1945","Ir. Soekarno menyampaikan pidato lima dasar yang diberi nama Pancasila.","#f59e0b"],["22 Juni 1945","Panitia Sembilan menyusun Piagam Jakarta sebagai rancangan pembukaan UUD.","#a78bfa"],["17 Agustus 1945","Soekarno-Hatta memproklamasikan kemerdekaan Indonesia.","#ef4444"],["18 Agustus 1945","PPKI mengesahkan UUD 1945 dan Pancasila sebagai dasar negara.","#16a34a"]];
+let seen=new Set(),timer;
+function tl(){let h='<path class="flow" d="M60 135H840" stroke="#2563eb" stroke-width="6" fill="none"/>';E.forEach((e,i)=>{const x=90+i*144,up=i%2==0,y=up?55:185;h+=`<g class="nd" onclick="pick(${i})" id="n${i}" style="transform-origin:${x}px 135px"><line x1="${x}" y1="135" x2="${x}" y2="${up?88:182}" stroke="${e[2]}" stroke-width="4"/><circle cx="${x}" cy="135" r="18" fill="${e[2]}" stroke="#fff" stroke-width="5"/><text x="${x}" y="141" text-anchor="middle" fill="#fff">${i+1}</text><rect x="${x-62}" y="${up?60:185}" width="124" height="28" rx="6" fill="#fff" stroke="${e[2]}" stroke-width="1.5"/><text x="${x}" y="${up?79:204}" text-anchor="middle" font-size="14">${e[0]}</text></g>`});h+='<text x="450" y="30" text-anchor="middle" font-size="15" fill="#1e3a8a">BPUPKI ➜ Panitia Sembilan ➜ Proklamasi ➜ PPKI</text>';$('tl').innerHTML=h}
+function pick(i){click();clearTimeout(timer);seen.add(i);$('it').textContent=E[i][0];$('id').textContent=E[i][1];$('tc').textContent=seen.size;$('tm').textContent=seen.size==6?'Selesai! 🎉':'Menjelajah…';E.forEach((_,k)=>{const c=$('n'+k).querySelector('circle');c.setAttribute('r',k==i?22:18);c.classList.toggle('pulse',k==i)});if(seen.size==6)good()}
+function auto(){let i=0;(function s(){pick(i);if(++i<6)timer=setTimeout(s,2600)})()}
+/* evaluasi */
+const MC=[["BPUPKI dibentuk pada tanggal …",["29 April 1945","1 Juni 1945","22 Juni 1945","18 Agustus 1945"],0],["Tokoh yang memberi nama “Pancasila” pada pidato 1 Juni 1945 adalah …",["Moh. Yamin","Soepomo","Ir. Soekarno","Moh. Hatta"],2],["Badan yang mengesahkan Pancasila sebagai dasar negara adalah …",["BPUPKI","PPKI","Panitia Sembilan","KNIP"],1]];
+const MT=[["BPUPKI","Badan penyelidik usaha persiapan kemerdekaan"],["Panitia Sembilan","Perumus Piagam Jakarta 22 Juni 1945"],["PPKI","Mengesahkan UUD 1945 18 Agustus 1945"],["Soepomo","Mengusulkan paham negara integralistik"]];
+const TF=[["Sidang pertama BPUPKI berlangsung pada 29 Mei–1 Juni 1945.",true],["Piagam Jakarta disahkan menjadi dasar negara tanpa perubahan apa pun.",false],["Hari Lahir Pancasila diperingati setiap 1 Juni.",true]];
+let sc=[0,0,0],q=0;
+function ev(s,k=0){const e=$('ev');$('ph1').textContent=['Babak A: Pilihan Ganda (30)','Babak B: Menjodohkan (40)','Babak C: Benar/Salah (30)','Rekapitulasi'][s];
+if(s==0){if(!k&&!q){sc=[0,0,0]}const m=MC[q];e.innerHTML=`<div class="card" style="width:80%"><h3>Soal ${q+1}/3</h3><p style="font-size:clamp(14px,2vh,18px)">${m[0]}</p>${m[1].map((o,i)=>`<button class="opt" onclick="mc(${i},this)">${'ABCD'[i]}. ${o}</button>`).join('')}</div>`}
+else if(s==1){const R=[2,0,3,1];e.innerHTML=`<div class="card" style="width:82%"><p style="text-align:center">Klik istilah di kiri, lalu pasangannya di kanan. Garis akan terhubung otomatis.</p><div id="mw" style="margin-top:8px"><svg id="ms"></svg><div id="ml">${MT.map((t,i)=>`<button class="mb" data-i="${i}" onclick="ml(this)">${t[0]}</button>`).join('')}</div><div id="mr">${R.map(i=>`<button class="mb" data-i="${i}" onclick="mr(this)">${MT[i][1]}</button>`).join('')}</div></div></div>`;sl=null;dn=0}
+else if(s==2){const t=TF[q];e.innerHTML=`<div class="card" style="width:80%;text-align:center"><h3>Pernyataan ${q+1}/3</h3><p style="font-size:clamp(14px,2vh,18px);margin:8px 0 14px">${t[0]}</p><button class="btn" style="background:#16a34a" onclick="tf(true)">✓ BENAR</button> <button class="btn" style="background:#dc2626" onclick="tf(false)">✗ SALAH</button></div>`}
+else{const T=sc[0]+sc[1]+sc[2];e.innerHTML=`<div class="card" style="text-align:center"><div class="trophy">🏆</div><div class="big">${T}</div><p>Pilihan Ganda: ${sc[0]}/30 • Menjodohkan: ${sc[1]}/40 • Benar/Salah: ${sc[2]}/30</p><p style="margin:6px 0">${T>=80?'Luar biasa! ⭐⭐⭐':T>=60?'Bagus, terus belajar! ⭐⭐':'Ayo pelajari materi lagi! ⭐'}</p><button class="btn" onclick="q=0;ev(0)">🔄 Ulangi</button></div>`;good()}}
+function mc(i,b){const m=MC[q],bs=b.parentNode.children;if(bs[0].disabled)return;[...bs].forEach(x=>x.disabled=true);bs[m[2]].classList.add('ok');if(i==m[2]){sc[0]+=10;good()}else{b.classList.add('no');bad()}setTimeout(()=>{if(++q<3)ev(0,1);else{q=0;ev(1)}},1100)}
+let sl=null,dn=0;
+function ml(b){if(b.classList.contains('done'))return;click();document.querySelectorAll('#ml .mb').forEach(x=>x.classList.remove('sel'));b.classList.add('sel');sl=b}
+function mr(b){if(!sl||b.classList.contains('done'))return;const ok=sl.dataset.i==b.dataset.i,w=$('mw').getBoundingClientRect(),a=sl.getBoundingClientRect(),c=b.getBoundingClientRect();
+const l=document.createElementNS('http://www.w3.org/2000/svg','line');l.setAttribute('x1',a.right-w.left);l.setAttribute('y1',a.top+a.height/2-w.top);l.setAttribute('x2',c.left-w.left);l.setAttribute('y2',c.top+c.height/2-w.top);l.setAttribute('stroke',ok?'#16a34a':'#dc2626');l.setAttribute('stroke-width','5');l.setAttribute('stroke-linecap','round');l.setAttribute('class','flow');$('ms').appendChild(l);
+if(ok){sc[1]+=10;good();sl.classList.add('done');b.classList.add('done')}else{bad();sl.classList.add('done');b.classList.add('done');sl.style.borderColor=b.style.borderColor='#dc2626'}
+sl.classList.remove('sel');sl=null;if(++dn==4)setTimeout(()=>{q=0;ev(2)},1300)}
+function tf(v){if(v==TF[q][1]){sc[2]+=10;good()}else bad();if(++q<3)ev(2);else{q=0;setTimeout(()=>ev(3),300)}}
+</script></body></html>
